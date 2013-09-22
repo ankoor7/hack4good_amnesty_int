@@ -23,6 +23,7 @@ gem 'ransack'
 gem 'rails_12factor'
 gem "haml-rails"
 gem "thin"
+gem 'newrelic_rpm'
 
 group :development do
   gem 'pry-rails'
