@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require_tree .
 //= require jquery.ui.all
+//= require jquery_nested_form
 
 $(document).ready(function(){
     $(".form_tooltip").tooltip({ placement: 'auto right'});

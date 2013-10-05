@@ -36,6 +36,14 @@
       <%= f.label "Causes", class: "sr-only"  %>
       <%= f.text_field :cause_list, placeholder: "Causes", class: "form-control" %>
     </div>
+    <div class="form-group">
+      <%= f.fields_for :ticket_blocks do |l| %>
+        <%= f.label "Name", class: "sr-only"  %>
+        <%=l.text_field :name, placeholder: "Name", class: "form-control"  %>
+        <%= f.label "Quantity", class: "sr-only"  %>
+        <%= f.select :quantity, ((1..30).map {|i| [i,i] }), {}, {class: "form-control"} %>
+      <% end %>
+    </div>
     <div class="actions form-group">
       <%= f.submit class: "btn btn-info" %>
     </div>

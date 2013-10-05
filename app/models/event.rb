@@ -1,5 +1,5 @@
 class Event < ActiveRecord::Base
-  attr_accessible :date, :description, :location, :name, :special_instructions, :latitude, :longitude, :causes, :cause_list, :image, :cause_search_hack
+  attr_accessible :date, :description, :location, :name, :special_instructions, :latitude, :longitude, :causes, :cause_list, :image, :cause_search_hack, :ticket_blocks_attributes
 
 
 
@@ -7,6 +7,8 @@ class Event < ActiveRecord::Base
   has_many :events_volunteers  # Moved the dependency removal to the
                                                  # Event Observer:
                                                  #     - before_destroy callback ", dependent: :destroy"
+  has_many :ticket_blocks
+  accepts_nested_attributes_for :ticket_blocks, allow_destroy: true
   has_many :volunteers, through: :events_volunteers
   belongs_to :group
 

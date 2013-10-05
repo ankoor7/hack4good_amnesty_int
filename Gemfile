@@ -23,7 +23,7 @@ gem 'ransack'
 gem 'rails_12factor'
 gem "haml-rails"
 gem "thin"
-gem 'newrelic_rpm'
+gem 'nested_form'
 
 group :development do
   gem 'pry-rails'

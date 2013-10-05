@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131005133102) do
+ActiveRecord::Schema.define(:version => 20131005141245) do
 
   create_table "charities", :force => true do |t|
     t.string   "name"
@@ -120,6 +120,16 @@ ActiveRecord::Schema.define(:version => 20131005133102) do
   create_table "tags", :force => true do |t|
     t.string "name"
   end
+
+  create_table "ticket_blocks", :force => true do |t|
+    t.string   "name"
+    t.integer  "quantity"
+    t.integer  "event_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "ticket_blocks", ["event_id"], :name => "index_ticket_blocks_on_event_id"
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "",     :null => false
