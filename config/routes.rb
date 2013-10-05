@@ -11,7 +11,6 @@ Vapp::Application.routes.draw do
   end
 
   resources :events, only: [:index, :show, :edit, :update, :destroy]
-  resources :users, only: [:show]
 
   resources :groups_leaders, only: [] do
     member do
