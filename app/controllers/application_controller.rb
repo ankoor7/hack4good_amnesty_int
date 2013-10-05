@@ -12,5 +12,13 @@ class ApplicationController < ActionController::Base
     @q=Event.search(params[:q])
   end
 
+  def remote_ip
+    if request.remote_ip == '127.0.0.1'
+      # Hard coded remote address
+      '194.74.6.136'
+    else
+      request.remote_ip
+    end
+  end
 
 end
