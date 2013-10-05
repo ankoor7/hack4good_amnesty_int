@@ -6,7 +6,7 @@ class EventsController < ApplicationController
   end
 
   def show
-    @event = Event.find(params[:id])
+    @event = Event.with_tickets.find(params[:id])
     @eventmap = Event.find(params[:id]).to_gmaps4rails
   end
 
@@ -16,7 +16,7 @@ class EventsController < ApplicationController
   end
 
   def edit
-    @event = Event.find(params[:id])
+    @event = Event.with_tickets.find(params[:id])
   end
 
   def create
