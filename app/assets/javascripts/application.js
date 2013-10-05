@@ -25,4 +25,6 @@ $(document).ready(function(){
       wrap: false
     })
 
+    $('form.nested').nestedFields();
+
 });
