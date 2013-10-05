@@ -1,4 +1,4 @@
-<%= form_for([@group,@event], html: { role: "form" }) do |f| %>
+<%= nested_form_for([@group,@event], html: { role: "form" }) do |f| %>
   <% if @event.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@event.errors.count, "error") %> prohibited this event from being saved:</h2>
@@ -36,14 +36,10 @@
       <%= f.label "Causes", class: "sr-only"  %>
       <%= f.text_field :cause_list, placeholder: "Causes", class: "form-control" %>
     </div>
-    <div class="form-group">
-      <%= f.fields_for :ticket_blocks do |l| %>
-        <%= f.label "Name", class: "sr-only"  %>
-        <%=l.text_field :name, placeholder: "Name", class: "form-control"  %>
-        <%= f.label "Quantity", class: "sr-only"  %>
-        <%= f.select :quantity, ((1..30).map {|i| [i,i] }), {}, {class: "form-control"} %>
-      <% end %>
-    </div>
+
+    <h2>Activists</h2>
+      <%= render 'ticket_fields', :f => f %>
+
     <div class="actions form-group">
       <%= f.submit class: "btn btn-info" %>
     </div>

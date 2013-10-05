@@ -17,7 +17,7 @@
             <h3><%= @event.date.strftime("%I:%M%P")  %></h3>
             <h3> <%= @event.date.strftime("%m/%d/%Y")  %></h3>
             <h3><%= @event.location %></h3>
-            <%= render partial: "shared/event_signup_or_register", locals: {event: @event}  %>
+            <%= render partial: "shared/ticket_block", locals: {event: @event}  %>
           </div>
           <div class='col-md-6'>
             <div class='map flex-map'><%= gmaps({ map_options: { auto_adjust: false, zoom: 14, center_latitude:  @event.latitude, center_longitude: @event.longitude }, markers: { data: @eventmap } }) %>
