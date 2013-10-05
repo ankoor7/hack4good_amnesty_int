@@ -94,7 +94,7 @@ charities.each do |k,v|
     # Loop through events
     (rand(4..6)).times do |event_num|
       cause_sample_event = causes.sample(Random.new.rand(1..2)).join(", ")
-      event = Event.new(date: (DateTime.now + rand(15)), description: "A test event by #{group.name}", location: addresses.sample, description: event_description, cause_list: cause_sample_event, cause_search_hack: cause_sample_event, special_instructions: event_special_instructions, latitude: "", longitude: "", name: "Event #{event_num} at #{group.name}", number_volunteers: rand(9..16), image: File.new(File.join(Rails.root.to_s, images_path, k.to_s + ".jpg")))
+      event = Event.new(date: (DateTime.now + rand(15)), description: "A test event by #{group.name}", location: addresses.sample, description: event_description, cause_list: cause_sample_event, cause_search_hack: cause_sample_event, special_instructions: event_special_instructions, latitude: "", longitude: "", name: "Event #{event_num} at #{group.name}", image: File.new(File.join(Rails.root.to_s, images_path, k.to_s + ".jpg")))
       event.group = group
       event.save
 
