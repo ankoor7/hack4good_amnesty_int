@@ -26,6 +26,7 @@ gem "thin"
 gem 'nested_form'
 
 group :development do
+  gem 'sqlite3', :require => 'sqlite3'
   gem 'pry-rails'
   gem 'pry-stack_explorer'
   gem 'annotate'
@@ -37,6 +38,7 @@ group :development do
 end
 
 group :test do
+  gem 'sqlite3', :require => 'sqlite3'
   gem 'rspec-rails'
   gem 'pry-rails'
   gem 'pry-debugger'
