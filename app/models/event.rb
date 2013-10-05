@@ -1,5 +1,5 @@
 class Event < ActiveRecord::Base
-  attr_accessible :date, :description, :location, :name, :number_volunteers, :special_instructions, :latitude, :longitude, :causes, :cause_list, :image, :cause_search_hack
+  attr_accessible :date, :description, :location, :name, :special_instructions, :latitude, :longitude, :causes, :cause_list, :image, :cause_search_hack
 
 
 
@@ -28,7 +28,6 @@ class Event < ActiveRecord::Base
   validates :description, presence: true
   validates :location, presence: true
   validates :name, presence: true
-  validates :number_volunteers, presence: true
 
 
 default_scope :order => 'date'
@@ -57,6 +56,10 @@ scope :approaching_events_email_not_sent, lambda { where(welcome_email_sent: fal
 
   def gmaps4rails_address
     "#{self.location}"
+  end
+
+  def number_volunteers
+    events_volunteer_ids.length
   end
 
   def space_available?
