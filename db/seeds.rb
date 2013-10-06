@@ -21,7 +21,7 @@ group_slogan = "Helping the world get better"
 
 group_description = "Kale chips meh cardigan drinking vinegar. Helvetica pop-up umami, vinyl raw denim pour-over try-hard biodiesel gentrify hella ethnic whatever mustache salvia Godard. 3 wolf moon irony quinoa, asymmetrical PBR Truffaut sriracha YOLO mumblecore forage Williamsburg synth blog selfies High Life. Banjo disrupt Williamsburg fashion axe Etsy. Terry Richardson post-ironic mlkshk twee plaid. Narwhal twee drinking vinegar Blue Bottle, hashtag master cleanse letterpress Williamsburg try-hard tofu pork belly mixtape distillery 8-bit. Marfa gentrify Pitchfork +1 chia, yr messenger bag 90's readymade chillwave cornhole photo booth chambray keytar."
 
-event_description = "Kale chips meh cardigan drinking vinegar. Helvetica pop-up umami, vinyl raw denim pour-over try-hard biodiesel gentrify hella ethnic whatever mustache salvia Godard. 3 wolf moon irony quinoa, asymmetrical PBR Truffaut sriracha YOLO mumblecore forage Williamsburg synth blog selfies High Life. Banjo disrupt Williamsburg fashion axe Etsy. Terry Richardson post-ironic mlkshk twee plaid. Narwhal twee drinking vinegar Blue Bottle, hashtag master cleanse letterpress Williamsburg try-hard tofu pork belly mixtape distillery 8-bit. Marfa gentrify Pitchfork +1 chia, yr messenger bag 90's readymade chillwave cornhole photo booth chambray keytar."
+event_description = "Kale chips meh cardigan drinking vinegar. Helvetica pop-up umami, vinyl raw denim pour-over try-hard biodiesel gentrify hella ethnic whatever mustache salvia Godard. 3 wolf moon irony quinoa, asymmetrical PBR Truffaut sriracha YOLO mumblecore forage Williamsburg synth blog selfies High Life. Banjo disrupt Williamsburg fashion axe Etsy. Terry Richardson post-ironic mlkshk twee plaid. Narwhal twee drinking vinegar Blue Bottle, hashtag master cleanse letterpress Williamsburg try-hard tofu pork belly mixtape distillery 8-bit. Marfa gentrify Pitchfork +1 chia, yr messenger bag 90's readymade chillwave cornhole photo booth chambray keytar.<br>Duis rutrum hendrerit tellus nec congue. In mauris nibh, imperdiet non erat in, tincidunt consequat leo. Phasellus augue orci, laoreet non venenatis eu, sagittis mollis justo. Etiam adipiscing aliquam mauris nec lobortis. Proin dolor mauris, pulvinar ac purus vitae, euismod blandit ligula. Etiam condimentum egestas ullamcorper. Curabitur non nisi sed libero sodales molestie. Donec euismod id sapien a vestibulum. Ut eget venenatis dolor. Nulla ultrices hendrerit orci. Integer arcu nunc, imperdiet quis aliquet sed, varius quis velit. In accumsan, erat quis porta interdum, ipsum diam vestibulum orci, placerat mattis neque enim quis felis. Nullam mollis condimentum libero, eget ornare lorem bibendum eu.<br>Maecenas sed ante non lacus feugiat laoreet a sed elit. Phasellus sollicitudin elementum elit, pretium cursus ipsum semper sed. Nunc sed lacus nec ipsum commodo porta sollicitudin quis nibh. Vestibulum eget sapien sagittis, adipiscing nisl et, iaculis libero. Vestibulum adipiscing condimentum faucibus. Phasellus tempus neque a tellus laoreet semper. Duis justo justo, condimentum ut quam quis, consequat mollis ipsum. Duis rhoncus eu nisi quis iaculis. Donec pulvinar lorem ac dui luctus, sit amet mollis nunc ultricies. Curabitur porttitor malesuada tellus, nec condimentum lectus posuere in. Phasellus porttitor cursus ipsum, sed blandit tortor dapibus sed. Ut convallis lacus id purus consectetur consectetur. Nulla et quam feugiat, malesuada libero eget, lacinia erat."
 
 event_special_instructions = "Narwhal twee drinking vinegar Blue Bottle, hashtag master cleanse letterpress Williamsburg try-hard tofu pork belly mixtape distillery 8-bit. Marfa gentrify Pitchfork 1 chia, yr messenger bag 90's readymade chillwave cornhole photo booth chambray keytar."
 
@@ -40,36 +40,21 @@ logos_path = "/app/assets/seed_pics/logos/"
 images_path = "/app/assets/seed_pics/images/"
 
 charities = {
-  foodcycle: "FoodCycle",
-  oxfam: "Oxfam",
-  unicef: "Unicef",
-  hackneypirates: "Hackney Pirates",
-  ytfn: "YTFN",
-  chayn: "Chayn",
-  studentfunder: "Student Funder",
-  makesense: "MakeSense"
+  amnesty: "Amnesty",
+  amnestyuk: "Amnesty UK",
+  amnestyinternational: "Amnesty International",
 }
 
 videos = {
-  foodcycle: "http://www.youtube.com/watch?v=vqrRMFOOPf8",
-  oxfam: "http://www.youtube.com/watch?v=hkg9ADEIPXM",
-  unicef: "http://www.youtube.com/watch?v=NmmnciqOLQw",
-  hackneypirates: "http://www.youtube.com/watch?v=q8PXp3rujwg",
-  ytfn: "http://www.youtube.com/watch?v=1yaEdF7--E8",
-  chayn: "",
-  studentfunder: "",
-  makesense: "http://www.youtube.com/watch?v=VwegvObubhI"
+  amnesty: "http://www.youtube.com/watch?v=dkl44sAEC6c",
+  amnestyuk: "http://www.youtube.com/watch?v=dn11ezK2WmY",
+  amnestyinternational: "http://www.youtube.com/watch?v=MZkF3e8IWg0",
 }
 
 splash_images = {
-  foodcycle: "http://www.flickr.com/photos/61527873@N05/5904837605",
-  oxfam: "http://www.flickr.com/photos/oxfam/9408920586/",
-  unicef: "http://www.flickr.com/photos/u10k/5043631738/lightbox/",
-  hackneypirates: "http://www.flickr.com/photos/34207052@N02/7995547490",
-  ytfn: "http://www.flickr.com/photos/45347326@N02/4661645806",
-  chayn: "",
-  studentfunder: "http://www.flickr.com/photos/58726828@N08/7154019121",
-  makesense: "http://www.flickr.com/photos/90045808@N06/8182975487"
+  amnesty: "http://www.flickr.com/photos/amnesty-international/9567274167/",
+  amnestyuk: "http://www.flickr.com/photos/amnesty-international/9567278431/",
+  amnestyinternational: "http://www.flickr.com/photos/amnesty-international/9567273431",
 }
 
 
@@ -77,7 +62,7 @@ splash_images = {
 # Loop through groups
 charities.each do |k,v|
     cause_sample = causes.sample(Random.new.rand(1..4)).join(", ")
-    group = Group.new(email: "test_charity_email_#{k.to_s}@gmail.com", description: group_description, slogan: group_slogan, cause_list: cause_sample, cause_search_hack: cause_sample, location: addresses[group_index], name: "#{v}", website: "#{k.to_s}.com", phone: "0790355555#{group_index}", logo: File.new(File.join(Rails.root.to_s, logos_path, k.to_s + ".jpg")), video: videos[k])
+    group = Group.new(email: "test_charity_email_#{k.to_s}@gmail.com", description: group_description, slogan: group_slogan, cause_list: cause_sample, cause_search_hack: cause_sample, location: addresses[group_index], name: "#{v}", website: "#{k.to_s}.com", phone: "0790355555#{group_index}", logo: File.new(File.join(Rails.root.to_s, logos_path,  "amnesty.jpg")), video: videos[k])
     # , splash_image: splash_images[k]
 
     group.save
@@ -94,7 +79,7 @@ charities.each do |k,v|
     # Loop through events
     (rand(4..6)).times do |event_num|
       cause_sample_event = causes.sample(Random.new.rand(1..2)).join(", ")
-      event = Event.new(date: (DateTime.now + rand(15)), description: "A test event by #{group.name}", location: addresses.sample, description: event_description, cause_list: cause_sample_event, cause_search_hack: cause_sample_event, special_instructions: event_special_instructions, latitude: "", longitude: "", name: "Event #{event_num} at #{group.name}", image: File.new(File.join(Rails.root.to_s, images_path, k.to_s + ".jpg")))
+      event = Event.new(date: (DateTime.now + rand(15)), description: "A test event by #{group.name}", location: addresses.sample, description: event_description, cause_list: cause_sample_event, cause_search_hack: cause_sample_event, special_instructions: event_special_instructions, latitude: "", longitude: "", name: "Event #{event_num} at #{group.name}", image: File.new(File.join(Rails.root.to_s, images_path, "amnesty"+ rand(1..11).to_s +  ".jpg")))
       event.group = group
       event.save
       developer_ticket_block = TicketBlock.new(name: "Developer", quantity: 10, event_id: event.id)
