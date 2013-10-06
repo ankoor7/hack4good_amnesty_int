@@ -3,8 +3,8 @@
     <div class='event_wrapper col-md-3 col-sm-6'>
 
       <%= link_to(image_tag(event.image.detail.url, class: 'logo_image img-responsive'), event.group) unless event.image.detail.url.nil? %>
-      <h3><%= event.name %></h3>
-      <p><%= event.description %></p>
+      <h3><%= link_to event.name, event %></h3>
+      <p><%= truncate(event.description, length: 355, separator: " ", omission: '... (continued)') %></p>
       <p><%= event.days_till_event %> days to go</p>
     </div>
 
