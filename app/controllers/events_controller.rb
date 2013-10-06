@@ -8,7 +8,6 @@ class EventsController < ApplicationController
   def show
     @event = Event.with_tickets.find(params[:id])
     @eventmap = Event.find(params[:id]).to_gmaps4rails
-    @days_till_event = ((Time.zone.now - @event.date) /1.day ).to_i
   end
 
   def new

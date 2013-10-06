@@ -64,7 +64,7 @@ scope :with_tickets, -> { includes(:ticket_blocks) }
   end
 
   def days_till_event
-    ((Time.zone.now - date) /1.day ).to_i
+    ((date - Time.zone.now ) /1.day ).to_i
   end
 
 
