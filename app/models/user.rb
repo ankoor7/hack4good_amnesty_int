@@ -33,11 +33,15 @@ class User < ActiveRecord::Base
   # scope :by_date, -> {order('date')}
 
   def registered_for?(event, ticket_block)
-    EventsVolunteer.where(:event_id => event.id, :ticket_block_id => ticket_block.id, :volunteer_id => current_user.id).count > 0
+    EventsVolunteer.where(:event_id => event.id, :ticket_block_id => ticket_block.id, :volunteer_id => id).count > 0
   end
 
   def attending_events?
     events.count > 0
+  end
+
+  def not_attending_event?(event)
+    !event.volunteer_ids.include? id
   end
 
   def can_see_attendees_of?(event)
