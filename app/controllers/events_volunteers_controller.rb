@@ -16,7 +16,8 @@ class EventsVolunteersController < ApplicationController
   def unregister
     @ticket_block = TicketBlock.find(params[:id])
     @event = @ticket_block.event
-    @events_volunteer = EventsVolunteer.where(:event_id => 41, :ticket_block_id => 1, :volunteer_id => 1).first
+    @events_volunteer = EventsVolunteer.new(event_id: @event.id, ticket_block_id: @ticket_block.id, volunteer_id: current_user.id)
+    binding.pry
     respond_to do |format|
       if @events_volunteer.destroy
         format.html { redirect_to home_path, notice: 'You have been unregistered!' }
