@@ -53,9 +53,7 @@ body, a {
     max-width: 1280px;
 }
 
-.hide {
-    display: none;
-}
+
 
 .t {
     display: table;
@@ -78,6 +76,10 @@ body, a {
 .event_summary .logo_wrapper {
   height: 100px;
   display: block;
+}
+
+.hide {
+    display: none;
 }
 
 /* padding */
