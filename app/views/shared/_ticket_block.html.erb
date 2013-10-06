@@ -1,18 +1,18 @@
 <div>
-
+  <h3>Tickets</h3>
   <table class='table'>
-  <tr>
-    <th>Type</th>
-    <th>spaces remaining</th>
-    <th></th>
-  </tr>
+    <tr>
+      <th>Type</th>
+      <th>Spaces</th>
+      <th></th>
+    </tr>
 
-  <% event.ticket_blocks.each do |ticket_block| %>
-  <tr>
-    <td><%= ticket_block.name %></td>
-    <td><%= ticket_block.quantity %></td>
-    <td><%= render partial: "shared/event_signup_or_register", locals: { event: @event }  %></td>
-  </tr>
-  <% end %>
-
+    <% event.ticket_blocks.each do |ticket_block| %>
+    <tr>
+      <td><%= ticket_block.name %></td>
+      <td><%= ticket_block.quantity %></td>
+      <td><%= render partial: "shared/event_signup_or_register", locals: { event: @event }  %></td>
+    </tr>
+    <% end %>
+  </table>
 </div>

@@ -7,14 +7,10 @@
   <table class='table'>
     <tr>
       <th>name</th>
-      <th>phone</th>
-      <th>email</th>
     </tr>
   <% event.volunteers.each do |volunteer| %>
   <tr>
-    <td><%= "#{volunteer.firstname} #{volunteer.lastname}" %></td>
-    <td><%= volunteer.phone %></td>
-    <td><%= volunteer.email %></td>
+    <td><%= "#{volunteer.firstname}" %></td>
   </tr>
   <% end %>
 </table>
