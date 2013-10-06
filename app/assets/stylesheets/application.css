@@ -34,7 +34,6 @@
 
 body {
     font-family: 'pt_sans' serif;
-  padding-bottom: 50px;
 }
 
 body, a {
@@ -79,6 +78,10 @@ body, a {
 }
 
 .hide {
+    display: none;
+}
+
+.hideForLaunch {
     display: none;
 }
 
