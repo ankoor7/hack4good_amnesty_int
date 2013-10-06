@@ -97,17 +97,28 @@ charities.each do |k,v|
       event = Event.new(date: (DateTime.now + rand(15)), description: "A test event by #{group.name}", location: addresses.sample, description: event_description, cause_list: cause_sample_event, cause_search_hack: cause_sample_event, special_instructions: event_special_instructions, latitude: "", longitude: "", name: "Event #{event_num} at #{group.name}", image: File.new(File.join(Rails.root.to_s, images_path, k.to_s + ".jpg")))
       event.group = group
       event.save
+      developer_ticket_block = TicketBlock.new(name: "Developer", quantity: 10, event_id: event.id)
+      developer_ticket_block.save
+      designer_ticket_block = TicketBlock.new(name: "Designer", quantity: 10, event_id: event.id)
+      designer_ticket_block.save
 
-      # Add volunteers to events
-
-      (rand(5..9)).times do |volunteer_num|
+      # Add developers to events
+      (rand(2..4)).times do |volunteer_num|
         user = User.new(email: "test_user_#{volunteer_index}@#{k}.com", firstname: firstnames.sample, lastname: lastnames.sample, phone: "0790355555#{volunteer_num}", password: "password", password_confirmation: "password", t_and_c: true)
         user.save
-
-        event.volunteers << user
-        event.save
+        events_volunteer = EventsVolunteer.new(event_id: event.id, ticket_block_id: developer_ticket_block.id, volunteer_id: user.id)
+        events_volunteer.save
         volunteer_index += 1
       end
+      # Add designers to events
+      (rand(2..3)).times do |volunteer_num|
+        user = User.new(email: "test_user_#{volunteer_index}@#{k}.com", firstname: firstnames.sample, lastname: lastnames.sample, phone: "0790355555#{volunteer_num}", password: "password", password_confirmation: "password", t_and_c: true)
+        user.save
+        events_volunteer = EventsVolunteer.new(event_id: event.id, ticket_block_id: designer_ticket_block.id, volunteer_id: user.id)
+        events_volunteer.save
+        volunteer_index += 1
+      end
+
       group.volunteers << user
     end
   group.save
