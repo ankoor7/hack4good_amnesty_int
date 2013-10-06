@@ -63,5 +63,9 @@ scope :with_tickets, -> { includes(:ticket_blocks) }
     volunteers.count / total_number_of_tickets unless total_number_of_tickets == 0
   end
 
+  def days_till_event
+    ((Time.zone.now - date) /1.day ).to_i
+  end
+
 
 end
