@@ -1,0 +1,12 @@
+
+#event_stats .stat {
+  font-size: 2em;
+}
+#event_stats .stat_label {
+  font-size: 1em;
+}
+
+#event_health .stat {
+  font-size: 3.5em;
+  font-weight: bold;
+}

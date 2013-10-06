@@ -59,5 +59,9 @@ scope :with_tickets, -> { includes(:ticket_blocks) }
     total_number_of_tickets - volunteers.count
   end
 
+  def health
+    volunteers.count / total_number_of_tickets unless total_number_of_tickets == 0
+  end
+
 
 end
