@@ -34,7 +34,6 @@
 
 body {
     font-family: 'pt_sans' serif;
-  padding-bottom: 50px;
 }
 
 body, a {
@@ -82,6 +81,10 @@ body, a {
     display: none;
 }
 
+/*.hideForLaunch {
+    display: none;
+}
+*/
 /* padding */
 
 .pt3 {padding-top: 3px;}
