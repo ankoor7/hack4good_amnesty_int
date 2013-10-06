@@ -60,7 +60,7 @@ scope :with_tickets, -> { includes(:ticket_blocks) }
   end
 
   def health
-    volunteers.count / total_number_of_tickets unless total_number_of_tickets == 0
+    total_number_of_tickets == 0 ? 0 : ( ( volunteers.count.to_f / total_number_of_tickets.to_f ) * 100).to_i
   end
 
   def days_till_event
