@@ -17,14 +17,14 @@
 //= require jquery_nested_form
 
 $(document).ready(function(){
-    $(".form_tooltip").tooltip({ placement: 'auto right'});
+    // $(".form_tooltip").tooltip({ placement: 'auto right'});
 
-    $('.carousel').carousel({
-      interval: 2000,
-      pause: 'hover',
-      wrap: false
-    })
+    // $('.carousel').carousel({
+    //   interval: 2000,
+    //   pause: 'hover',
+    //   wrap: false
+    // })
 
-    $('form.nested').nestedFields();
+    // $('form.nested').nestedFields();
 
 });

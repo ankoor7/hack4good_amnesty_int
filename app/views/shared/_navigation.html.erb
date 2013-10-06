@@ -1,39 +1,53 @@
     <!-- Static navbar -->
 
-
-<div class="navbar">
-  <div class="container">
-      <%= link_to "Vapp", ( current_user ? home_path : root_path), class: "" %>
-      <ul class="">
-
-
-        <%= search_form_for @q, url: search_path, html: {method: :post, class: "", role: "search"} do |f| %>
-          <div class="form-group">
-          <%= f.text_field :cause_search_hack_or_group_name_or_name_cont, class: "form-control", placeholder: 'Search' %>
-          </div>
-          <button type="submit" class="btn">Submit</button>
-        <% end %>
-      <%= render partial: "shared/alerts" %>
-      <% if current_user %>
-        <li><%= link_to "Dashboard", dashboard_path %></li>
-        <li><%= link_to "Account", account_path %></li>
-        <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
-      <% else %>
-        <%= form_for(resource, :as => resource_name, :url => session_path(resource_name), html: {role: "form"} ) do |f| %>
-          <li><%= f.label :email, class: "sr-only" %><br />
-          <%= f.email_field :email, :autofocus => true, class: "", placeholder: "Email" %></li>
-          <li><%= f.label :password, class: "sr-only"  %><br />
-          <%= f.password_field :password, class: "", placeholder: "Password"  %></li>
-          <% if devise_mapping.rememberable? -%>
-            <li><%= f.check_box :remember_me %> <%= f.label :remember_me %></li>
-          <% end %>
-          <li><%= f.submit "Sign in", class: "" %></li>
-        <% end %>
-        <%= render "devise/shared/links" %>
-        <li><%= link_to "Join", new_user_registration_path, class: "active" %></li>
-      <% end %>
-    </ul>
-  </div>
+<div class="navbar-container">
+    <div class="navbar">
+        <div class="td logo-container">
+          <%= link_to "goodMeet", ( current_user ? home_path : root_path), class: "logo block" %>
+        </div>
+      <nav class="td nav-container">
+          <div class="ib">
+            <div class="t">
+                <div class="td pt6">
+                    <div class="search-mock"></div>
+                </div>
+                <div class="td pitch pt12">
+                    <%= link_to "Pitch a meetup", new_session_path(resource_name) %>
+                </div>
+                <div class="td pt12">
+                    <%= link_to "Log in", new_session_path(resource_name), class: "login" %>
+                </div>
+            </div>
+        </div>
+        <div class="hide">
+            <%= search_form_for @q, url: search_path, html: {method: :post, class: "", role: "search"} do |f| %>
+        </div>
+            <div class="hide">
+                <div class="form-group">
+                    <%= f.text_field :cause_search_hack_or_group_name_or_name_cont, class: "form-control", placeholder: 'Search' %>
+                </div>
+                  <button type="submit" class="btn">Submit</button>
+                <% end %>
+              <%= render partial: "shared/alerts" %>
+              <% if current_user %>
+                <li><%= link_to "Dashboard", dashboard_path %></li>
+                <li><%= link_to "Account", account_path %></li>
+                <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+              <% else %>
+                <%= form_for(resource, :as => resource_name, :url => session_path(resource_name), html: {role: "form"} ) do |f| %>
+                  <li><%= f.label :email, class: "sr-only" %><br />
+                  <%= f.email_field :email, :autofocus => true, class: "", placeholder: "Email" %></li>
+                  <li><%= f.label :password, class: "sr-only"  %><br />
+                  <%= f.password_field :password, class: "", placeholder: "Password"  %></li>
+                  <% if devise_mapping.rememberable? -%>
+                    <li><%= f.check_box :remember_me %> <%= f.label :remember_me %></li>
+                  <% end %>
+                  <li><%= f.submit "Sign in", class: "" %></li>
+                <% end %>
+                <%= render "devise/shared/links" %>
+                <li><%= link_to "Join", new_user_registration_path, class: "active" %></li>
+              <% end %>
+            </div>
+      </nav>
+    </div>
 </div>
-
-
