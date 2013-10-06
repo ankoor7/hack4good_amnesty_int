@@ -7,7 +7,7 @@
       <th></th>
     </tr>
 
-    <% event.ticket_blocks.each do |ticket_block| %>
+    <% @event.ticket_blocks.each do |ticket_block| %>
     <tr>
       <td><%= ticket_block.name %></td>
       <td><%= ticket_block.space_left %></td>

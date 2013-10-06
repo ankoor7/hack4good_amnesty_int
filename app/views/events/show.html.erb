@@ -23,6 +23,7 @@
           <br/>
           <span class='stat_label'>participants</span>
         </p>
+
       </div>
 
       <div id='event_health' class='col-xs-8'>
@@ -35,6 +36,7 @@
     <h4 class='orange'>If participatants goal is reached the meetup will happen on:</h4>
     <h3><%= @event.date.strftime("%^B %d, %Y")  %><br> <%= @event.date.strftime("%I:%M%P")  %></h3>
     <h3><%= @event.location %></h3>
+        <%= render partial: "shared/ticket_block", locals: {event: @event}  %>
   </div>
 
 </div>
