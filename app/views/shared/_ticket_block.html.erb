@@ -11,7 +11,7 @@
     <tr>
       <td><%= ticket_block.name %></td>
       <td><%= ticket_block.quantity %></td>
-      <td><%= render partial: "shared/event_signup_or_register", locals: { event: @event }  %></td>
+      <td><%= render partial: "shared/event_signup_or_register", locals: { event: @event, ticket_block: ticket_block }  %></td>
     </tr>
     <% end %>
   </table>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131005141245) do
+ActiveRecord::Schema.define(:version => 20131006085254) do
 
   create_table "charities", :force => true do |t|
     t.string   "name"
@@ -45,14 +45,14 @@ ActiveRecord::Schema.define(:version => 20131005141245) do
   create_table "events_volunteers", :force => true do |t|
     t.integer  "event_id"
     t.integer  "volunteer_id"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
-    t.string   "name"
-    t.integer  "quantity"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+    t.integer  "ticket_block_id"
   end
 
   add_index "events_volunteers", ["event_id", "volunteer_id"], :name => "index_events_volunteers_on_event_id_and_volunteer_id", :unique => true
   add_index "events_volunteers", ["event_id"], :name => "index_events_volunteers_on_event_id"
+  add_index "events_volunteers", ["ticket_block_id"], :name => "index_events_volunteers_on_ticket_block_id"
   add_index "events_volunteers", ["volunteer_id"], :name => "index_events_volunteers_on_volunteer_id"
 
   create_table "groups", :force => true do |t|

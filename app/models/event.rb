@@ -39,23 +39,6 @@ scope :approaching_events, lambda { where(date: DateTime.now+2.days..DateTime.no
 scope :approaching_events_email_not_sent, lambda { where(welcome_email_sent: false) }
 scope :with_tickets, -> { includes(:ticket_blocks) }
 
-
-  def unregister(user)
-    if volunteer_ids.include? user.id
-      volunteers.delete(user)
-    else
-      errors.add(:register, "user is not registered for this event")
-    end
-  end
-
-  def register(user)
-    if volunteers.count <= number_volunteers
-      volunteers << user
-    else
-      errors.add(:unregister, "the event is full")
-    end
-  end
-
   def gmaps4rails_address
     "#{self.location}"
   end
