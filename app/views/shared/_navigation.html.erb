@@ -12,7 +12,11 @@
                     <div class="search-mock"></div>
                 </div>
                 <div class="td pitch pt12">
-                    <%= link_to "Pitch a meetup", new_user_session_path %>
+                  <% if current_user  %>
+                    <%= link_to "Pitch a meetup", dashboard_path %>
+                  <% else %>
+                    <%= link_to("Join", new_user_registration_path) %>
+                  <% end %>
                 </div>
                 <div class="td pt12">
                   <% if current_user  %>
